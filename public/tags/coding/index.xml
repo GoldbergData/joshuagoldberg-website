@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding | Joshua Goldberg</title>
+    <link>/tags/coding/</link>
+      <atom:link href="/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <description>Coding</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2019 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Coding</title>
+      <link>/tags/coding/</link>
+    </image>
+    
+    <item>
+      <title>No API, No Problem</title>
+      <link>/talk/no-api-no-problem/</link>
+      <pubDate>Sat, 27 Apr 2019 12:00:00 +0000</pubDate>
+      <guid>/talk/no-api-no-problem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Introduction</title>
+      <link>/project/ffc-coding-documentation/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/project/ffc-coding-documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Mars Experience</title>
+      <link>/project/ffc-product-landing-page/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/project/ffc-product-landing-page/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
