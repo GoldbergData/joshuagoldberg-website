@@ -918,7 +918,7 @@
       
     
     <li>
-      <a href="/#contact" >
+      <a href="/contact" >
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -974,6 +974,23 @@
       </a>
     </li>
   
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.freecodecamp.org/goldbergdata" target="_blank" rel="noopener">
+        <i class="fab fa-free-code-camp"></i>
+      </a>
+    </li>
+  
 </ul>
 
     </div>
@@ -1003,6 +1020,9 @@
 
     
     
+
+    
+    
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
@@ -1015,36 +1035,35 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
       
 
+      
+      
     
 
     
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
-    
-
-    
-    
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    <script>const isSiteThemeDark = false;</script>
     
 
     
     
     
+
     
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
     
     
     <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
       const content_type = {
         'post': "Posts",
         'project': "Projects",
@@ -1083,12 +1102,6 @@
 
     
     
-
-    
-    
-
-    
-    
     
     
     
@@ -1115,27 +1128,17 @@
   <div class="container">
     <footer class="site-footer">
   
-  <p class="powered-by">
-    
-      <a href="/privacy/">Privacy Policy</a>
-    
-    
-       &middot; 
-      <a href="/terms/">Terms</a>
-    
-  </p>
-  
 
   <p class="powered-by">
-    
+    © Joshua Goldberg, 2020 &middot; 
 
-    Powered by the
+    Made with <i class="far fa-heart" style="color:#E13D3D"></i>, <a href="https://github.com/GoldbergData/joshuagoldberg-website" target="_blank" rel="noopener"><i class="fas fa-code-branch" style="color:#E13D3D"></i></a>, the <a href="https://cran.r-project.org/" target="_blank" rel="noopener"><i class="fab fa-r-project"></i> </a><a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener">blogdown</a> package, and the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
     
     <span class="float-right" aria-hidden="true">
-      <a href="#" class="back-to-top">
+      <a href="#" id="back_to_top">
         <span class="button_icon">
           <i class="fas fa-chevron-up fa-2x"></i>
         </span>

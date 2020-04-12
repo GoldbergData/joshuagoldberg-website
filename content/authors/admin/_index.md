@@ -28,7 +28,7 @@ role: Lead Data Scientist
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'
+  link: '/contact'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/goldbergdata
@@ -38,6 +38,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/goldbergdata
+- icon: free-code-camp
+  icon_pack: fab
+  link: https://www.freecodecamp.org/goldbergdata
 superuser: true
 user_groups:
 - Researchers

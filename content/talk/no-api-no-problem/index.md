@@ -26,6 +26,7 @@ math: true
 # projects:
 # - internal-project
 # publishDate: "2017-01-01T00:00:00Z"
+share: true
 slides: 
 summary: A talk on automating spreadsheet workflows in R.
 tags: [Coding]
