@@ -3,7 +3,7 @@
 name: Joshua Goldberg
 authors:
 - admin
-bio: Joshua Goldberg is a Lead Data Scientist at Nuveen investments focusing on solving demand-forecasting related problems with statistics, machine learning, and deep learning.
+bio: I am a Lead Data Scientist at Nuveen investments focusing on solving demand-forecasting related problems with statistics, machine learning, and deep learning.
 education:
   courses:
   - course: MSc in Analytics
@@ -47,4 +47,4 @@ user_groups:
 - Visitors
 ---
 
-Joshua Goldberg is a Lead Data Scientist at Nuveen investments focusing on solving demand-forecasting related problems with statistics, machine learning, and deep learning. He has a deep passion for data science and programming, having completed a Masters in Analytics at the University of Chicago. In his free time, he enjoys running, photography, and reading. Joshua finished two Chicago marathons and three half marathons.
+I am a Lead Data Scientist at Nuveen investments focusing on solving demand-forecasting related problems with statistics, machine learning, and deep learning. I have strong interests in artificial intelligence and programming, having completed a Master of Science in Analytics at the University of Chicago. In my free time, I enjoy running, photography, and reading. I have finished two Chicago marathons and three half marathons. I hope to run the Chicago marathon again in 2020.
