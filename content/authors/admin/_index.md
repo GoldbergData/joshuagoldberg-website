@@ -41,6 +41,9 @@ social:
 - icon: free-code-camp
   icon_pack: fab
   link: https://www.freecodecamp.org/goldbergdata
+- icon: strava
+  icon_pack: fab
+  link: https://www.strava.com/athletes/26922368
 superuser: true
 user_groups:
 - Researchers
