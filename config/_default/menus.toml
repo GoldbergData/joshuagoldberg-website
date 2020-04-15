@@ -5,17 +5,17 @@
 
 [[main]]
   name = "Blog"
-  url = "/post"
+  url = "#demo"
   weight = 10
 
 [[main]]
   name = "Talks"
-  url = "/talk"
+  url = "#talks"
   weight = 20
 
 [[main]]
   name = "Projects"
-  url = "/project"
+  url = "#projects"
   weight = 30
 
 [[main]]
