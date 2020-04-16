@@ -8,8 +8,13 @@
   font-size: 1.15em;
 }
 
-#posts {
+.dark #posts {
   background-color: #23252f;
+  padding: 75px 0 50px 0;
+}
+
+#posts {
+  background-color: #f7f7f7;
   padding: 75px 0 50px 0;
 }
 
