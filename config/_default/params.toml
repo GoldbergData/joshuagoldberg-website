@@ -11,6 +11,8 @@
 #   Browse user installed themes in `data/themes/`
 theme = "ocean"
 
+disqusURL: "https://joshuagoldberg.name"
+
 # Enable users to switch between day and night mode?
 day_night = true
 
