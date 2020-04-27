@@ -11,7 +11,7 @@
 #   Browse user installed themes in `data/themes/`
 theme = "ocean"
 
-disqusURL: "https://joshuagoldberg.name"
+# disqusURL: "https://joshuagoldberg.name"
 
 # Enable users to switch between day and night mode?
 day_night = true
@@ -220,7 +220,7 @@ plugins_js  = []
 
   # Configuration of Disqus.
   [comments.disqus]
-    shortname = "GoldbergData"  # Paste the shortname from your Disqus dashboard.
+    shortname = "joshuagoldberg-name"  # Paste the shortname from your Disqus dashboard.
     show_count = true  # Show comment count in page header? (true/false)
 
   # Configuration of Commento.
