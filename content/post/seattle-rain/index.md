@@ -11,7 +11,7 @@ image:
   focal_point: ''
 ---
 
-When people speak about places to live and visit, a few things come to mind almost immediately: culture, food, and __weather__. Seattle might as well be a synonym for rain. While I was looking to relocate to Seattle, my friends almost universally responded "it rains a lot there." I have spent several years in Chicago. The Midwest has its grey, rainy days, so I was not deterred by these comments. While I won't be comparing Chicago to Seattle in this post, I will generally explore the rain patterns of Seattle to find out if the anecdotes are true.
+When people speak about places to live and visit, a few things come to mind almost immediately: culture, food, and __weather__. While I was looking to relocate to Seattle, my friends almost universally responded "it rains a lot there." Seattle might as well be a synonym for rain. I have lived in Chicago for  several years. The Midwest has its grey, rainy days, so I was not deterred by these comments. While I won't be comparing Chicago to Seattle in this post, I will generally explore the rain patterns of Seattle to find out if the anecdotes are true.
 
 A few questions come to mind as it pertains to weather in Seattle:
 
@@ -50,12 +50,12 @@ To understand if the number of rainy days in Seattle is relatively extreme, let'
 
 ![png](./national_rainfall.png)
 
-Washington is red, indicating that the state experiences rain 144-223 days over the course of the year. Our analysis shows ~153 days of rain each year from 1948-2017. There are a few other states/areas spread about the northeast that experience similar levels to Seattle in terms of rain. Most of the states center between 78-137 days of rain each year.
+Washington is red, indicating that the state experiences rain 144-223 days over the course of the year. Our analysis shows about 153 days of rain each year from 1948-2017. There are a few other states/areas in the northeast that experience similar levels to Seattle in terms of rain. Most of the states center between 78-137 days of rain each year.
 
 <br>
 
 ### Frequency by year
-The previous plot summarizes the entire data set. Did the proportion of rainy days vary across time? Let's check this out over the years elapsed in the time series.
+The previous plot is an average of the entire data set from 1948-2017. I am curious if the proportion of rainy days significantly vary across time.
 
 At first glance, the data looks [mean-reverting](https://mathworld.wolfram.com/ReversiontotheMean.html). There is a strong decline in rainy days starting in the mid 1970s that oscillates until the 1990s, but this is probably more random than any kind of trend.
 
@@ -65,11 +65,9 @@ At first glance, the data looks [mean-reverting](https://mathworld.wolfram.com/R
 
 ### Frequency by month
 
-Before we look at frequency of rainy days by month, what would we expect? I have spent a lot of time in Florida and we typically expect rain during the summer through the fall (hurricane season). Does Seattle follow similar trends for when rain? Probably not, given Florida is tropical and Seattle is locked away in a mountainous region. But I am not a weather or geological expert.
+Before we look at frequency of rainy days by month, what would we expect? I have spent a lot of time in Florida and we typically expect rain during the summer through the fall (hurricane season). Does Seattle follow similar trends for when rain? Probably not, given Florida is tropical and Seattle is tucked away in a mountainous region. But I am not a weather or geological expert. Let's look at the data.
 
-Let's look at the data.
-
-Interestingly, rainy days in the summer is not the case in Seattle. On the contrary, it looks like the least amount of rainy days happen during the summer and fall! The peak amount of rain days occur during the winter. Something to look further into would be the amount of rain/precipitation. It's possible that there are not as many rainy days in the summer, but when it rains, Seattle may experience more volume of rain.
+Interestingly, rainy days in the summer is not the case in Seattle. On the contrary, it looks like the least amount of rainy days happen during the summer and fall! The peak amount of rainy days occur during the winter. Something to look further into would be the amount of rain/precipitation in each season. It's possible that there are not as many rainy days in the summer, but when it rains, there is more volume of rain compared to the winter.
 
 ![png](./output5.png)
 
@@ -79,15 +77,15 @@ Interestingly, rainy days in the summer is not the case in Seattle. On the contr
 
 We learned that rainy days (categorized as any amount of rain occurring in a day), is least likely during the summer in Seattle. In this section, we will look further to explore the trends in actual rainfall over years and months.
 
-We see a similar U-shape in mean precipitation compared to the rainy days plot. In other words, more actual rain fall occurs in the winter with the least amount of rainfall occurring in the summer. Let's see if temperature provides any explanatory power to precipitation.
+We see a similar U-shape in mean precipitation compared to the rainy days plot. In other words, more actual rain fall occurs in the winter with the least amount of rainfall occurring in the summer. Let's see if temperature provides any additional information.
 
 ![png](./output6.png)
 
-Higher temperatures in the summer coincide with less rain. Normally I think of higher temperatures being more humid and rainy, but this is not the case in Seattle. Next we will look at temperature ranges in each month.
+Higher temperatures in the summer coincide with less rain. Normally I think of higher temperatures with humidity and rain, but this is not the case in Seattle. Next we will look at temperature ranges in each month.
 
 ![png](./output7.png)
 
-Seattle's winter has the most stable temperatures, while summer has a wide gap between high/low temperatures.
+Seattle's winter has the most stable temperatures, while the summer has a wide gap between high/low temperatures.
 
 ![png](./output8.png)
 
@@ -95,7 +93,7 @@ Seattle's winter has the most stable temperatures, while summer has a wide gap b
 
 ## Are there seasonal trends of rain in Seattle?
 
-We answered this question in our exploration. Rain is persistent in the spring and winter months, while the summer appears to experience the least amount of rain. A quick [web search](https://cliffmass.blogspot.com/2015/02/why-is-northwest-warm-and-california.html) reveals that Seattle summers are warm and dry for specific meteorological reasons.
+We answered this question in our exploration. Rain is persistent in the winter, while the summer appears to experience the least amount of rain. A quick [web search](https://cliffmass.blogspot.com/2015/02/why-is-northwest-warm-and-california.html) reveals that Seattle summers are warm and dry for specific meteorological reasons that we won't get into.
 
 <br>
 
@@ -103,7 +101,7 @@ We answered this question in our exploration. Rain is persistent in the spring a
 
 This section may be technical to some audiences. You can skip to the [conclusion](#what-did-we-learn) if you prefer.
 
-Can we predict whether it will rain on a given day in Seattle? Through our exploration, we noticed that rainy days are related to the time of year and temperature. But our exploration did not look at lag indicators. We will explore some simple lag features and use the features we find explanatory to solve the binary classification problem: rain or no rain on a given day in Seattle.
+Can we predict whether it will rain on a given day in Seattle? Through our exploration, we noticed that rainy days are related to the time of year and temperature. But our exploration did not look at lag features. We will explore some simple lag features and use them to solve the binary classification problem: rain or no rain on a given day in Seattle.
 
 Here is a brief view of our lag features:
 
@@ -388,6 +386,6 @@ Anecdotally, Seattle's rain is known to be light and misty. Whether rain is ligh
 
 ![png](./seattle_skyline.jpg)
 
-We also learned that the summers are dry and warm. Seattle summers are [rumored](https://www.thrillist.com/entertainment/seattle/17-reasons-seattle-summers-dominate-all-other-summers) to be a blast — probably driven by the mild summer weather. The winter looks predictable as the high/low temperature range is narrow. While you may see more days of rain in the winter, you can expect to wear similar layers to fend off the chilly air. Lastly, to determine if it will rain tomorrow, our analysis showed that yesterday's precipitation and and temperature can help us come to a reasonably accurate prediction.
+We also learned that the summers are dry and warm. Seattle summers are [rumored](https://www.thrillist.com/entertainment/seattle/17-reasons-seattle-summers-dominate-all-other-summers) to be a blast — probably driven by the mild summer weather. The winter looks predictable as the high/low temperature range is narrow. While you may see more days of rain in the winter, you can expect to wear similar layers to fend off the chilly air. Finally, to determine if it will rain tomorrow, our analysis showed that yesterday's precipitation and and temperature can help us come to a reasonably accurate prediction.
 
 If you have made it this far, you have learned some facts about Seattle's rain. Whether you are in a conversation or visiting sometime soon, I hope this information helps you in your high debates about Seattle weather or your travel.
