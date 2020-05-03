@@ -55,7 +55,7 @@ Washington is red, indicating that the state experiences rain 144-223 days over 
 <br>
 
 ### Frequency by year
-The previous plot is an average of the entire data set from 1948-2017. I am curious if the proportion of rainy days significantly vary across time.
+The previous plot is an average of the data from 1948-2017. I am curious if the proportion of rainy days significantly vary across time.
 
 At first glance, the data looks [mean-reverting](https://mathworld.wolfram.com/ReversiontotheMean.html). There is a strong decline in rainy days starting in the mid 1970s that oscillates until the 1990s, but this is probably more random than any kind of trend.
 
@@ -382,10 +382,10 @@ The feature importance of the random forest reveals that the previous day's rain
 
 Generally speaking, Seattle experiences a high number of rainy days compared to the rest of the country. However, if we look at actual rainfall, [Seattle ranks](http://www.usa.com/rank/us--average-precipitation--state-rank.htm) in the middle of the pack. 
 
-Anecdotally, Seattle's rain is known to be light and misty. Whether rain is light or heavy, generally it comes with a lack of sunshine. I took this photo on a trip in January a few years ago. The sky was consistently grey. There was rain, but it was light and hardly noticeable.
+Anecdotally, Seattle's rain is known to be light and misty. Whether rain is light or heavy, it generally comes with a lack of sunshine. I took this photo on a trip in January a few years ago. The sky was consistently grey. There was rain, but it was light and hardly noticeable.
 
 ![png](./seattle_skyline.jpg)
 
-We also learned that the summers are dry and warm. Seattle summers are [rumored](https://www.thrillist.com/entertainment/seattle/17-reasons-seattle-summers-dominate-all-other-summers) to be a blast — probably driven by the mild summer weather. The winter looks predictable as the high/low temperature range is narrow. While you may see more days of rain in the winter, you can expect to wear similar layers to fend off the chilly air. Finally, to determine if it will rain tomorrow, our analysis showed that yesterday's precipitation and and temperature can help us come to a reasonably accurate prediction.
+We also learned that the summers are dry and warm. Seattle summers are [rumored](https://www.thrillist.com/entertainment/seattle/17-reasons-seattle-summers-dominate-all-other-summers) to be a blast — probably driven by the mild summer weather. The winter looks predictable as the high/low temperature range is narrow. While you may see more days of rain in the winter, you can expect to wear similar layers to fend off the chilly air. Finally, to determine if it will rain tomorrow, our analysis showed that yesterday's precipitation and and temperature can help with making reasonably accurate predictions.
 
-If you have made it this far, you have learned some facts about Seattle's rain. Whether you are in a conversation or visiting sometime soon, I hope this information helps you in your high debates about Seattle weather or your travel.
+If you made it this far, you have learned some facts about Seattle's rain. Whether you are in a conversation or visiting sometime soon, I hope this information helps you in your high debates about Seattle weather or your travel.
