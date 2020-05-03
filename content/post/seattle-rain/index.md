@@ -10,7 +10,7 @@ image:
   focal_point: ''
 ---
 
-When people speak about places to live and visit, a few things come to mind almost immediately: culture, food, and __weather__. Seattle might as well be a synonym for rain. While I was looking to relocate to Seattle, my friends almost universally responded "it rains a lot there." I have spent several years and Chicago. The Midwest has its grey, rainy days, so I was not deterred by these comments. While I won't be comparing Chicago to Seattle in this post, I will generally explore the rain patterns of Seattle to find out if the anecdotes are true.
+When people speak about places to live and visit, a few things come to mind almost immediately: culture, food, and __weather__. Seattle might as well be a synonym for rain. While I was looking to relocate to Seattle, my friends almost universally responded "it rains a lot there." I have spent several years in Chicago. The Midwest has its grey, rainy days, so I was not deterred by these comments. While I won't be comparing Chicago to Seattle in this post, I will generally explore the rain patterns of Seattle to find out if the anecdotes are true.
 
 A few questions come to mind as it pertains to weather in Seattle:
 
