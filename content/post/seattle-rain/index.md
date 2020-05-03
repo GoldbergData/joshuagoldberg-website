@@ -1,6 +1,6 @@
 ---
 title: Does it really rain a lot in Seattle?
-date: 2020-04-26
+date: 2020-05-02
 tags:
   - Seattle
   - data analysis
@@ -10,12 +10,12 @@ image:
   focal_point: ''
 ---
 
-When people speak about places to live and visit, a few things come to mind almost immediately: culture, food, and __weather__. Seattle might as well be a synonym for rain. While I was looking to relocate to Seattle, my friends almost universally responded "it rains a lot there." I have spent several years and Chicago. The midwest has its grey, rainy days, so I was not deterred by these comments. While I won't be comparing Chicago to Seattle in this post, I will generally explore the rain patterns of Seattle to find out if the anecdotes are true.
+When people speak about places to live and visit, a few things come to mind almost immediately: culture, food, and __weather__. Seattle might as well be a synonym for rain. While I was looking to relocate to Seattle, my friends almost universally responded "it rains a lot there." I have spent several years and Chicago. The Midwest has its grey, rainy days, so I was not deterred by these comments. While I won't be comparing Chicago to Seattle in this post, I will generally explore the rain patterns of Seattle to find out if the anecdotes are true.
 
 A few questions come to mind as it pertains to weather in Seattle:
 
 - What frequency does it rain?
-- How much actual rainfall occurs (measured in percipitation/inches)?
+- How much actual rainfall occurs (measured in precipitation/inches)?
 - Are there seasonal trends of rain?
 - Can we predict whether it will rain on a given day with the available data?
 
@@ -250,7 +250,7 @@ As we discovered previously, more rain occurs during the winter seasons than the
 
 We will use random forest for this classification problem.
 
-The training data will include everything before the year 1990. All data 1990 and beyound will be used for holdout. We will scale the data to ensure no feature dominates the training process. Lastly, since our data is a dependent time series, we will use a [splitting method](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html) appropiate for the data. Note our class frequencies represent approximately what we saw in exploration:
+The training data will include everything before the year 1990. All data 1990 and beyond will be used for holdout. We will scale the data to ensure no feature dominates the training process. Lastly, since our data is a dependent time series, we will use a [splitting method](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html) appropriate for the data. Note our class frequencies represent approximately what we saw in exploration:
 
 
 <div>
@@ -357,7 +357,7 @@ In other words, an unlimited max depth will allow the tree to grow to the extent
 
 We can visually inspect the cross validation plots to select features. The results include the following best parameters for random forest based on AUC: `max_depth`: 5, `max_features`: 5, and `n_estimators`: 100.
 
-The confusion matrix below was constructed using the holdout data (year 1990 and beyound). Our results are decent for a simple model using limited features. We are right about 72% of the time. This compares with the fact that it rains ~43% of the time in Seattle. Our current model is better than the naive decision to predict rain everyday (or no rain everyday).   
+The confusion matrix below was constructed using the holdout data (year 1990 and beyond). Our results are decent for a simple model using limited features. We are right about 72% of the time. This compares with the fact that it rains ~43% of the time in Seattle. Our current model is better than the naive decision to predict rain everyday (or no rain everyday).   
 
 ![png](./output13.png)
 
@@ -373,7 +373,7 @@ We capture a decent amount of the rainy days (81% recall) with this model. The d
 
 <br>
 
-The feature importance of the random forest reveals that the previous day's rain and temperature are the most significant factors in determining if it will rain on a given day. We could disgard some of the other features that are not important to see if we can improve our generalization error.
+The feature importance of the random forest reveals that the previous day's rain and temperature are the most significant factors in determining if it will rain on a given day. We could discard some of the other features that are not important to see if we can improve our generalization error.
 
 ![png](./output15.png)
 
@@ -381,7 +381,7 @@ The feature importance of the random forest reveals that the previous day's rain
 
 Generally speaking, Seattle experiences a high number of rainy days compared to the rest of the country. However, if we look at actual rainfall, [Seattle ranks](http://www.usa.com/rank/us--average-precipitation--state-rank.htm) in the middle of the pack. 
 
-Anecdotally, Seattle's rain is known to be light and misty. Whether rain is light or heavy, generally it comes with a lack of sunshine. I took this photo on a trip in January a few years ago. The sky was consistently grey. There was rain, but it was light and hardly noticable.
+Anecdotally, Seattle's rain is known to be light and misty. Whether rain is light or heavy, generally it comes with a lack of sunshine. I took this photo on a trip in January a few years ago. The sky was consistently grey. There was rain, but it was light and hardly noticeable.
 
 ![png](./seattle_skyline.jpg)
 
