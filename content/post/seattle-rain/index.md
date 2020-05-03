@@ -356,9 +356,7 @@ In other words, an unlimited max depth will allow the tree to grow to the extent
 
 We can visually inspect the cross validation plots to select features. The results include the following best parameters for random forest based on AUC: `max_depth`: 5, `max_features`: 5, and `n_estimators`: 100.
 
-The confusion matrix below was constructed using the holdout data (year 1990 and beyond). Our results are decent for a simple model using limited features. We are right about 72% of the time. This compares with the fact that it rains 43% of the time in Seattle. Our current model is better than the naive decision to predict rain everyday (or no rain everyday).   
-
-![png](./output13.png)
+The metrics below were constructed using the holdout data (year 1990 and beyond). Our results are decent for a simple model using limited features. We are right about 72% of the time. This compares with the fact that it rains 43% of the time in Seattle. Our current model is better than the naive decision to predict rain everyday (or no rain everyday).   
 
 We capture a decent amount of the rainy days (81% recall) with this model. The default cutoff is using the max probability. We could change the probability cutoff for classifying a rainy day if we are interested in capturing more rainy days or being more precise. We will leave that exercise for another time.
 
