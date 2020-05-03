@@ -41,7 +41,7 @@ Here are general time series plots of the numeric data. We will focus on the las
 
 ## What frequency does it rain in Seattle?
 
-It rained ~43% of the time in Seattle from 1948-2017. On average, that's approximately ~157 days per year.
+It rained 43% of the time in Seattle from 1948-2017. On average, that's approximately 157 days per year.
 
 ![png](./output3.png)
 
