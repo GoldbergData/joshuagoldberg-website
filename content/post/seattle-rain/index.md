@@ -56,7 +56,7 @@ Washington is red, indicating that the state experiences rain 144-223 days over 
 ### Frequency by year
 The previous plot summarizes the entire data set. Did the proportion of rainy days vary across time? Let's check this out over the years elapsed in the time series.
 
-At first glance, the data looks [mean-reverting](https://mathworld.wolfram.com/ReversiontotheMean.html). There is a strong decline in rainy days starting in the mid 1970s that oscillates until the 1990s, but this is probably more stochastic than any kind of trend.
+At first glance, the data looks [mean-reverting](https://mathworld.wolfram.com/ReversiontotheMean.html). There is a strong decline in rainy days starting in the mid 1970s that oscillates until the 1990s, but this is probably more random than any kind of trend.
 
 ![png](./output4.png)
 
