@@ -375,7 +375,7 @@ We capture a decent amount of the rainy days (81% recall) with this model. The d
 
 The feature importance of the random forest reveals that the previous day's rain and temperature are the most significant factors in determining if it will rain on a given day. We could discard some of the other features that are not important to see if we can improve our generalization error.
 
-![png](./output15.png)
+![png](./output14.png)
 
 ## What did we learn?
 
