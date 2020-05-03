@@ -4,6 +4,7 @@ date: 2020-05-02
 tags:
   - Seattle
   - data analysis
+  - machine learning
 summary: Taking a closer look at Seattle rain to verify the anecdotes.
 image:
   caption: Image by [Joshua Goldberg]('Featured.jpg')
