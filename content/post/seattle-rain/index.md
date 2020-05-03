@@ -29,7 +29,7 @@ The [data](https://www.kaggle.com/rtatman/did-it-rain-in-seattle-19482017) we wi
 - `tmin`: minimum temperature (Fahrenheit)
 - `rain`: whether it rained or not
 
-All the code used for this analysis can be found at [here](https://github.com/GoldbergData/seattle-rain/blob/master/seattle_rain.ipynb).
+All the code used for this analysis can be found [here](https://github.com/GoldbergData/seattle-rain/blob/master/seattle_rain.ipynb).
 
 Here are general time series plots of the numeric data. We will focus on the last few years to make it easier to notice any patterns. There is some seasonality in precipitation and temperature, which is typically common knowledge in weather and climate. However, sometimes seasonality is not obvious depending on the region.
 
