@@ -378,6 +378,8 @@ The feature importance of the random forest reveals that the previous day's rain
 
 ![png](./output15.png)
 
+<br>
+
 ## What did we learn?
 
 Generally speaking, Seattle experiences a high number of rainy days compared to the rest of the country. However, if we look at actual rainfall, [Seattle ranks](http://www.usa.com/rank/us--average-precipitation--state-rank.htm) in the middle of the pack. 
