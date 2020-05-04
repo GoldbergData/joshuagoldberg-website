@@ -16,7 +16,7 @@ When people speak about places to live and visit, a few things come to mind almo
 A few questions come to mind as it pertains to weather in Seattle:
 
 - What frequency does it rain?
-- How much actual rainfall occurs (measured in precipitation/inches)?
+- How much rainfall occurs (measured in precipitation/inches)?
 - Are there seasonal trends of rain?
 - Can we predict whether it will rain on a given day with the available data?
 
@@ -73,7 +73,7 @@ Interestingly, rainy days in the summer is not the case in Seattle. On the contr
 
 <br>
 
-## How much actual rainfall occurs in Seattle?
+## How much rainfall occurs in Seattle?
 
 We learned that rainy days (categorized as any amount of rain occurring in a day), is least likely during the summer in Seattle. In this section, we will look further to explore the trends in actual rainfall over years and months.
 
@@ -247,7 +247,7 @@ As we discovered previously, more rain occurs during the winter seasons than the
 
 ### Modeling
 
-We will use random forest for this classification problem.
+We will use [random forest](https://en.wikipedia.org/wiki/Random_forest) for this classification problem.
 
 The training data will include everything before the year 1990. All data 1990 and beyond will be used for holdout. We will scale the data to ensure no feature dominates the training process. Lastly, since our data is a dependent time series, we will use an appropriate [splitting method](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html). Note our class frequencies represent approximately what we saw in exploration:
 
@@ -345,6 +345,10 @@ There were a few missing values in this data set. These have to be removed or im
 </table>
 </div>
 
+<br>
+
+#### Training
+
 Now that we have cross validation results, let's check the optimal value for parameters.
 
 ![png](./output12.png)
@@ -355,6 +359,10 @@ The model quickly begins to overfit with `max_depth` increasing. From sklearn do
 In other words, an unlimited max depth will allow the tree to grow to the extent that it fits the data perfectly. This is something we want to avoid to achieve a better [generalized](https://en.wikipedia.org/wiki/Generalization_error) result. Fitting data perfectly means we memorize all patterns — signal and noise.
 
 We can visually inspect the cross validation plots to select features. The results include the following best parameters for random forest based on AUC: `max_depth`: 5, `max_features`: 5, and `n_estimators`: 100.
+
+<br>
+
+#### Evaluation
 
 The metrics below were constructed using the holdout data (year 1990 and beyond). Our results are decent for a simple model using limited features. We are right about 72% of the time. This compares with the fact that it rains 43% of the time in Seattle. Our current model is better than the naive decision to predict rain everyday (or no rain everyday).   
 
