@@ -247,9 +247,9 @@ As we discovered previously, more rain occurs during the winter seasons than the
 
 ### Modeling
 
-We will use [random forest](https://en.wikipedia.org/wiki/Random_forest) for this classification problem.
+[Random forest](https://en.wikipedia.org/wiki/Random_forest) was used for this classification problem.
 
-The training data will include everything before the year 1990. All data 1990 and beyond will be used for holdout. We will scale the data to ensure no feature dominates the training process. Lastly, since our data is a dependent time series, we will use an appropriate [splitting method](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html). Note our class frequencies represent approximately what we saw in exploration:
+The training data included everything before the year 1990. All data 1990 and beyond was used for holdout. The data was scaled to ensure no feature dominates the training process. Lastly, since the data is a dependent time series, we used an appropriate [splitting method](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html). Note the class frequencies represent approximately what we saw in exploration:
 
 
 <div>
@@ -289,7 +289,7 @@ The training data will include everything before the year 1990. All data 1990 an
 </table>
 </div>
 
-There were a few missing values in this data set. These have to be removed or imputed for modeling. Since the amount of missing data is small, we will remove the data.
+There were a few missing values in this data set. These have to be removed or imputed for modeling. Since the amount of missing data is small, the data was removed.
 
 <div>
 <style scoped>
@@ -358,15 +358,15 @@ The model quickly begins to overfit with `max_depth` increasing. From sklearn do
 
 In other words, an unlimited max depth will allow the tree to grow to the extent that it fits the data perfectly. This is something we want to avoid to achieve a better [generalized](https://en.wikipedia.org/wiki/Generalization_error) result. Fitting data perfectly means we memorize all patterns — signal and noise.
 
-We can visually inspect the cross validation plots to select features. The results include the following best parameters for random forest based on AUC: `max_depth`: 5, `max_features`: 5, and `n_estimators`: 100.
+We can visually inspect the cross validation plots to select optimal parameters. The results include the following best parameters for random forest based on AUC: `max_depth`: 5, `max_features`: 5, and `n_estimators`: 100.
 
 <br>
 
 #### Evaluation
 
-The metrics below were constructed using the holdout data (year 1990 and beyond). Our results are decent for a simple model using limited features. We are right about 72% of the time. This compares with the fact that it rains 43% of the time in Seattle. Our current model is better than the naive decision to predict rain everyday (or no rain everyday).   
+The metrics below were constructed using the holdout data (year 1990 and beyond). The results are decent for a simple model using limited features. The model is correct about 72% of the time. This compares with the fact that it rains 43% of the time in Seattle. The current model is better than the naive decision to predict rain everyday (or no rain everyday).   
 
-We capture a decent amount of the rainy days (81% recall) with this model. The default cutoff is using the max probability. We could change the probability cutoff for classifying a rainy day if we are interested in capturing more rainy days or being more precise. We will leave that exercise for another time.
+The model captured a decent amount of the rainy days (81% recall). The default for classifying rain or not is using the max probability. We could change the probability cutoff for classifying a rainy day if we are interested in capturing more rainy days or being more precise. We will leave that exercise for another time.
 
 |               | precision | recall| f1-score | support|
 | ------------- |:---------:| -----:|:--------:| ------:|
@@ -378,7 +378,7 @@ We capture a decent amount of the rainy days (81% recall) with this model. The d
 
 <br>
 
-The feature importance of the random forest reveals that the previous day's rain and temperature are the most significant factors in determining if it will rain on a given day. We could discard some of the other features that are not important to see if we can improve our generalization error.
+The feature importance of the random forest reveals that the previous day's rain and temperature are the most significant factors in determining if it will rain on a given day. We could discard some of the other features that are not important to see if we can improve our generalization error, but the model result is satisfying for this exercise.
 
 ![png](./output15.png)
 
