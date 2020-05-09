@@ -5,7 +5,7 @@ tags:
   - Seattle
   - data analysis
   - machine learning
-summary: Taking a closer look at Seattle rain to verify the anecdotes.
+summary: Using data analysis and machine learning to verify the anecdotes about Seattle's rain.
 image:
   caption: Image by [Joshua Goldberg]('Featured.jpg')
   focal_point: ''
