@@ -10,7 +10,8 @@ output:
       titleSlideClass: ["left", "middle", "inverse"]
       highlightStyle: github
       highlightLines: true
-      countIncrementalSlides: false
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
       ratio: "16:9"
       navigation:
         scroll: false
@@ -94,11 +95,11 @@ class: text-slide
 
 - Connect/Read/Write R ↔ MySQL
 
-- SQL, R, Excel
+- Comparing SQL and R (dplyr)
 
 ---
 
-class: text-slide, main-slide, center, middle
+class: text-slide, main-slide, center, middle, hide-count
 
 # Structured Query Language (SQL)
 # Train of Thought
@@ -284,7 +285,7 @@ GROUP BY ...
 
 ---
 
-class: text-slide, main-slide, center, middle
+class: text-slide, main-slide, center, middle, hide-count
 
 # Connect/Read/Write R ↔ MySQL
 
@@ -446,7 +447,7 @@ When working with databases, __dbplyr__ tries to be as lazy as possible (more on
 
 ---
 
-class: text-slide, main-slide, center, middle
+class: text-slide, main-slide, center, middle, hide-count
 
 # Connecting concepts
 
@@ -541,6 +542,7 @@ class: text-slide
 ---
 
 name: memory-lane
+class: hide-count
 background-image: url(memory-lane.jpeg)
 background-size: cover
 
@@ -631,6 +633,7 @@ res_select_where
 ---
 
 name: confused-gif
+class: hide-count
 background-image: url(confused.gif)
 background-size: cover
 

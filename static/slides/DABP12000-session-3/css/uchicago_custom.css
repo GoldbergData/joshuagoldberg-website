@@ -56,9 +56,8 @@
 }
 
 /* Remove slide count */
-.remark-slide-number {
+.hide-count .remark-slide-number {
     display: none;
-    opacity: 0;
 }
 
 
