@@ -773,6 +773,7 @@ class: text-slide
 .center[<img src="Rlogo.png" alt="R logo" title="R logo" height="100px" width="100px">]
 ```{r echo=FALSE}
 res_dplyr <- flights_db %>% 
+  distinct(month) %>% 
   mutate(month_name = case_when(
     month == 1 ~ "January",
     month == 2 ~ "February",
@@ -782,12 +783,12 @@ res_dplyr <- flights_db %>%
     month == 6 ~ "June",
     TRUE ~ "Other month"
   )) %>% 
-  distinct(month, month_name) %>% 
   arrange(month)
 ```
 
 ```{r eval=FALSE}
 flights_db %>% 
+  distinct(month) %>% 
   mutate(month_name = case_when(
     month == 1 ~ "January",
     month == 2 ~ "February",
@@ -795,9 +796,9 @@ flights_db %>%
     month == 4 ~ "April",
     month == 5 ~ "May",
     month == 6 ~ "June",
+    # You get the point
     TRUE ~ "Other month"
   )) %>% 
-  distinct(month, month_name) %>% 
   arrange(month)
 ```
 
@@ -814,6 +815,7 @@ SELECT DISTINCT month,
     WHEN month = 4 THEN 'April'
     WHEN month = 5 THEN 'May'
     WHEN month = 6 THEN 'June'
+    -- You get the point
     ELSE 'Other month'
   END month_name
 FROM flights
@@ -852,6 +854,7 @@ class: text-slide
 .pull-left[
 ```{r echo=FALSE}
 flights_db %>% 
+  distinct(month) %>% 
   mutate(month_name = case_when(
     month == 1 ~ "January",
     month == 2 ~ "February",
@@ -861,7 +864,6 @@ flights_db %>%
     month == 6 ~ "June",
     TRUE ~ "Other month"
   )) %>% 
-  distinct(month, month_name) %>% 
   arrange(month) %>% 
   show_query()
 ```

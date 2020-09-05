@@ -831,6 +831,7 @@ class: text-slide
 
 ```r
 flights_db %&gt;% 
+  distinct(month) %&gt;% 
   mutate(month_name = case_when(
     month == 1 ~ "January",
     month == 2 ~ "February",
@@ -838,9 +839,9 @@ flights_db %&gt;%
     month == 4 ~ "April",
     month == 5 ~ "May",
     month == 6 ~ "June",
+    # You get the point
     TRUE ~ "Other month"
   )) %&gt;% 
-  distinct(month, month_name) %&gt;% 
   arrange(month)
 ```
 
@@ -858,6 +859,7 @@ SELECT DISTINCT month,
     WHEN month = 4 THEN 'April'
     WHEN month = 5 THEN 'May'
     WHEN month = 6 THEN 'June'
+    -- You get the point
     ELSE 'Other month'
   END month_name
 FROM flights
@@ -928,8 +930,7 @@ class: text-slide
 
 ```
 ## &lt;SQL&gt;
-## SELECT DISTINCT `month`, `month_name`
-## FROM (SELECT `year`, `month`, `day`, `dep_time`, `sched_dep_time`, `dep_delay`, `arr_time`, `sched_arr_time`, `arr_delay`, `carrier`, `flight`, `tailnum`, `origin`, `dest`, `air_time`, `distance`, `hour`, `minute`, `time_hour`, CASE
+## SELECT `month`, CASE
 ## WHEN (`month` = 1.0) THEN ('January')
 ## WHEN (`month` = 2.0) THEN ('February')
 ## WHEN (`month` = 3.0) THEN ('March')
@@ -938,7 +939,9 @@ class: text-slide
 ## WHEN (`month` = 6.0) THEN ('June')
 ## ELSE ('Other month')
 ## END AS `month_name`
-## FROM `flights`) `dbplyr_002`
+## FROM (SELECT DISTINCT *
+## FROM (SELECT `month`
+## FROM `flights`) `dbplyr_003`) `dbplyr_004`
 ## ORDER BY `month`
 ```
 ]
