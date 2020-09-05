@@ -876,7 +876,7 @@ dbDisconnect(con_mydb)
 ---
 class: text-slide
 
-# Why use R instead of SQL?
+# Why use R <del>instead</del> of SQL?
 
 Do not think of using R as a trade-off between SQL. Remember, R and SQL are both popular languages for dealing with data (data analysis, retrieval, manipulation, etc). Learning both R and SQL and how they can interface should provide a considered boost in your productivity and skills as a citizen of the data world. 
 
@@ -886,20 +886,16 @@ Utilize both R and SQL by their strengths. In some cases, using only R is the mo
 
 class: text-slide
 
-# Why use R instead of SQL?
+# Why use R <del>instead</del> of SQL?
 
-R can augment your SQL efforts by generating queries with dbplyr and by passing data between R and SQL. But that's not it. R can help you reuse SQL code by [placing SQL code in R functions](https://glue.tidyverse.org/reference/glue_sql.html). Say you want reuse a query to pull sales data and you are tired of copying/pasting. You can do something like this: 
+R can also help you reuse SQL code by [placing SQL code in R functions](https://glue.tidyverse.org/reference/glue_sql.html). For example, here's a query inside an R function to pull sales data and subset by region:
 
 ```{r eval=FALSE}
 query_sales_data <- function(state, city, con_mydb) {
-  query <- glue_sql("SELECT * 
-           FROM sales 
-           WHERE state = {state}", .con = con_mydb)
-  DBI::dbGetQuery(query)
+  query <- glue_sql("SELECT * FROM sales WHERE state = {state}", .con = con_mydb)
+  DBI::dbGetQuery(con_mydb, query)
 }
 ```
-
-I have not formerly introduced this concept yet, but I wanted to expose the idea here to show the possibilities when using R and SQL. 
 
 See this [vignette](https://dbplyr.tidyverse.org/articles/sql.html) for more examples of using dbplyr.
 
