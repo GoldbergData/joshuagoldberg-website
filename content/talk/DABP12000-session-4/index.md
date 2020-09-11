@@ -9,7 +9,7 @@ address:
   street: 
 all_day: false
 authors: [Joshua Goldberg]
-date: "2020-09-19T19:00:00Z"
+date: "2020-09-10T19:00:00Z"
 date_end: "2020-09-10T20:00:00Z"
 event: Data Understanding and Preparation Course (U Chicago)
 event_url: https://grahamschool.uchicago.edu/course/data-understanding-and-preparation
