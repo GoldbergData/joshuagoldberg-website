@@ -312,17 +312,19 @@ class: text-slide
 
 # Sub queries
 
+.pull-left[
 ## Advantages
 
 - Isolate parts of the query
 
-- Reduce complexity of query
+- Reduce complexity of query]
 
+.pull-right[
 ## Disadvantages
 
 - Can become overly complex if too nested
 
-- May execute slower due to optimizer
+- May execute slower due to optimizer]
 
 ---
 
@@ -373,6 +375,28 @@ SELECT
 FROM products p;
 ```
 ]
+
+---
+
+class: text-slide
+
+# Sub query (declaring variables)
+
+Using variables to capture sub query results may be easier to read rather than nesting your sub query with other queries. Here is a [post](https://stackoverflow.com/questions/11754781/how-to-declare-a-variable-in-mysql) covering variable declaration in MySQL.
+
+```{sql eval=FALSE}
+-- Set the max amount to a variable
+SET @max_amount = (SELECT MAX(amount) FROM payments);
+
+-- Customer who made the maximum payment
+SELECT 
+    customerNumber, checkNumber, amount, @max_amount max_amount
+FROM
+    payments
+WHERE
+    amount = @max_amount;
+```
+
 
 ---
 
