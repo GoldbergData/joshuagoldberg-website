@@ -1,6 +1,14 @@
 /* U Chicago colors */
 /* red: #800000 */
 /* grey: #4d4d4f */
+/* gold: #ffbd25 */
+
+:root {
+  --uc-red: #800000;
+  --uc-grey: #4d4d4f;
+  --uc-gold: #ffbd25;
+  --uc-tan: #F3F3F1;
+}
 
 .box-1 {
     background-color: #800000;
@@ -57,6 +65,10 @@
 
 /* Remove slide count */
 .hide-count .remark-slide-number {
+    display: none;
+}
+
+.title-slide .remark-slide-number {
     display: none;
 }
 
@@ -200,6 +212,20 @@ div.my-footer span {
   background-color: white;
 }
 
+.svg-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.svg-img-full {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 /* CSS from Andrew Heiss https://github.com/andrewheiss/datavizm20.classes.andrewheiss.com/blob/master/static/slides/css/ath-slides.css */
 
 /*
@@ -221,4 +247,79 @@ Three column layout
   float: right;
   width: 30%;
   padding: 0 0 0 2.5%;
+}
+
+.huge {
+  font-size: 2.2em;
+}
+
+.large {
+  font-size: 1.7em;
+}
+
+.normal {
+  font-size: 1em;
+}
+
+.medium {
+  font-size: 1.4em;
+}
+
+.SMALL {
+  /* CURSE YOU LATEX */
+  font-size: 0.9em;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.tiny {
+  font-size: 0.5em;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.title {
+  padding-top: 0em;
+  border-top: 110px solid #777777;
+}
+
+.title h1 {
+  margin-top: -85px;
+  margin-bottom: 50px;
+}
+
+.title-inv-7 {
+  border-top-color: var(--uc-tan);
+}
+
+.box-inv-7,
+.section-title-inv-7 {
+  background-color: var(--uc-tan);
+}
+
+.box-inv-7,
+.title-inv-7 h1,
+.section-title-inv-7 h1 {
+  color: var(--uc-red);
+}
+
+.section-title h1,
+.section-title-inv h1 {
+  color: #FFFFFF;
+  font-size: 2.3em;
+  line-height: 1.3;
+}
+
+/* CSS from Alison https://github.com/rstudio-education/arm-workshop-rsc2019/blob/master/static/slides/css/ */
+
+div.my-footer span {
+    font-size: 10pt;
+    color: #F7F8FA;
+    position: absolute;
+    left: 15px;
+    bottom: 2px;
 }

@@ -4,7 +4,7 @@ subtitle: "And Databases with R"
 author: "Joshua Goldberg <br><span style='font-size: 50%;'>Data Understanding and Preparation: DABP12000 20A7<br>Fall 2020</span>"
 output:
   xaringan::moon_reader:
-    css: [default, css/uchicago_custom.css, robot-fonts]
+    css: [default, css/uchicago.css, robot-fonts]
     lib_dir: libs
     nature:
       titleSlideClass: ["left", "middle", "inverse"]
@@ -49,7 +49,6 @@ getwd()
 ```
 
 ```{r include=FALSE}
-# install.packages("RMySQL")
 library(RMySQL)
 library(keyring)
 library(odbc)
@@ -80,8 +79,8 @@ copy_nycflights13 <- function (src, ...)
 
 con_mydb <- dbConnect(
   MySQL(),
-  user = key_list("sql")$username,
-  password = key_get("sql"),
+  user = key_list("r-mysql")$username,
+  password = key_get("r-mysql"),
   dbname = "mydb",
   host = "localhost"
 )
