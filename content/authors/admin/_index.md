@@ -3,7 +3,7 @@
 name: Joshua Goldberg
 authors:
 - admin
-bio: I am a data scientist at Amazon solving demand-forecasting problems with statistics, machine learning, and deep learning.
+bio: I am a data scientist with experience solving demand-forecasting problems with statistics, machine learning, and deep learning.
 education:
   courses:
   - course: MSc in Analytics
@@ -22,9 +22,12 @@ interests:
 
 name: Joshua Goldberg
 organizations:
-- name: Amazon
+- name: University of Chicago
   url: ""
-role: Data Scientist
+  role: ""
+# - name: Amazon
+#  url: ""
+# role: Data Scientist
 social:
 - icon: envelope
   icon_pack: fas
@@ -47,4 +50,4 @@ social:
 superuser: true
 ---
 
-I am a data scientist at Amazon solving demand-forecasting problems with statistics, machine learning, and deep learning. I have strong interests in artificial intelligence and programming, having completed a Master of Science in Analytics at the University of Chicago. In my free time, I enjoy running, photography, and reading. I have finished two Chicago marathons and three half marathons. I hope to run the Chicago marathon again in 2020.
+I am a data scientist with experience solving demand-forecasting problems with statistics, machine learning, and deep learning. I have strong interests in artificial intelligence and programming, having completed a Master of Science in Analytics at the University of Chicago. In my free time, I enjoy running, photography, and reading. I have finished two Chicago marathons and three half marathons.
