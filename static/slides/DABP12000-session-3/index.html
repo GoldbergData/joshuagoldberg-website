@@ -4,6 +4,7 @@
     <title>Week 3: Introduction to SQL</title>
     <meta charset="utf-8" />
     <meta name="author" content="Joshua Goldberg  Data Understanding and Preparation: DABP12000 20A7 Fall 2020" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/robot-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/uchicago.css" type="text/css" />
@@ -419,7 +420,7 @@ tbl(con_mydb, "airports")
 
 ```
 *## # Source:   table&lt;airports&gt; [?? x 8]
-*## # Database: mysql 8.0.19 [root@localhost:/mydb]
+*## # Database: mysql 8.0.23 [root@localhost:/mydb]
 ##    faa   name                       lat    lon   alt    tz dst   tzone          
 ##    &lt;chr&gt; &lt;chr&gt;                    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;          
 ##  1 04G   Lansdowne Airport         41.1  -80.6  1044    -5 A     America/New_Yo…
@@ -557,9 +558,8 @@ class: text-slide
 
 .center[
 
-&lt;figure&gt;
+
   &lt;img src="tidy-1.png" alt="Tidy data" title="Tidy data" width="75%"&gt;
-&lt;/figure&gt;
 
 ]
 
@@ -585,7 +585,7 @@ flights_db %&gt;% head(2)
 
 ```
 ## # Source:   lazy query [?? x 19]
-## # Database: mysql 8.0.19 [root@localhost:/mydb]
+## # Database: mysql 8.0.23 [root@localhost:/mydb]
 ##    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ## 1  2013     1     1      517            515         2      830            819
@@ -618,7 +618,7 @@ flights_db %&gt;%
 
 ```
 ## # Source:   lazy query [?? x 2]
-## # Database: mysql 8.0.19 [root@localhost:/mydb]
+## # Database: mysql 8.0.23 [root@localhost:/mydb]
 ##   origin dest 
 ##   &lt;chr&gt;  &lt;chr&gt;
 ## 1 EWR    IAH  
@@ -752,7 +752,7 @@ class: text-slide
 
 ```
 ## # Source:     lazy query [?? x 4]
-## # Database:   mysql 8.0.19 [root@localhost:/mydb]
+## # Database:   mysql 8.0.23 [root@localhost:/mydb]
 ## # Groups:     year, origin
 ## # Ordered by: desc(max_arr_delay)
 ##    year origin dest  max_arr_delay
@@ -878,7 +878,7 @@ class: text-slide
 
 ```
 ## # Source:     lazy query [?? x 2]
-## # Database:   mysql 8.0.19 [root@localhost:/mydb]
+## # Database:   mysql 8.0.23 [root@localhost:/mydb]
 ## # Ordered by: month
 ##    month month_name 
 ##    &lt;int&gt; &lt;chr&gt;      
@@ -993,7 +993,10 @@ class: text-slide, last-slide
 
 - R can automate SQL code generation and facilitate reusing SQL code by placing SQL code in an R functions
 
-- You can download/upload data between R and SQL; automating the download/upload process with a programming language can save time
+- You can download/upload data between R and SQL; automating the download/upload process with a programming language can save time 
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
