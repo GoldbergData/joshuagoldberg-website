@@ -9,8 +9,8 @@ address:
   street: 
 all_day: false
 authors: [Joshua Goldberg]
-date: "2021-08-06T16:00:00Z"
-date_end: "2020-08-06T17:00:00Z"
+date: "2021-08-05T16:00:00Z"
+date_end: "2020-08-05T17:00:00Z"
 event: Sync Session
 event_url: 
 featured: false
