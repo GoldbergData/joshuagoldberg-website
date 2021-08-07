@@ -1,7 +1,7 @@
 ---
-title: "Statistical Thinking for Machine Learning"
+title: "Statistical Thinking for Machine Learning: Lecture 3"
 subtitle: ""
-author: "Joshua Goldberg <br><span style='font-size: 50%;'>UChicago MastersTrack: Coursera"
+author: "Joshua Goldberg <br><span style='font-size: 50%;'>UChicago MastersTrack: Coursera<br>Thank you to Gregory Bernstein for parts of these slides</span>"
 output:
   xaringan::moon_reader:
     css: [default, uchicago_slide.css, robot-fonts]
@@ -199,11 +199,11 @@ class: text-slide
 
 # Calculating the bias effect
 
-1. Population model (true relationship): $y=\beta_0+\beta_1x_1+\beta_2x_2+\epsilon$
+1. Population model (true relationship): $y=\beta_0+\beta_1x_1+\beta_2x_2+\nu$
 
-2. Our model: $y=\hat{\beta}_0+\hat{\beta}_1x_1+\epsilon$
+2. Our model: $y=\hat{\beta}_0+\hat{\beta}_1x_1+\upsilon$
 
-3. Auxiliary model: $x_2=\delta_0+\delta_1+x_1+\epsilon$
+3. Auxiliary model: $x_2=\delta_0+\delta_1x_1+\epsilon$
 
 .left-column[
 - In the simple case of one regression and one omitted variable, estimating equation (2) by OLS will yield:
@@ -316,8 +316,8 @@ class: text-slide
   - $\text{salary}=9,934.27\times\text{HR}$
   - $\text{salary}=1,002.95\times\text{BA}$
   - $\text{salary}=3,291.02\times\text{RBI}$
-- Fit a model with all three: $\text{salary}=9226.169\times \text{HR}+225.884 \times \text{RBI}+2.982 \times\text{BA}$
-- What is this model saying? Why not: $\text{salary}=9934.27\times \text{HR}+3291.02 \times \text{RBI}+1002.95 \times\text{BA}$
+- Fit a model with all three: $\text{salary}=9,226.169\times \text{HR}+225.884 \times \text{RBI}+2.982 \times\text{BA}$
+- What is this model saying? Why not: $\text{salary}=9,934.27\times \text{HR}+3,291.02 \times \text{RBI}+1,002.95 \times\text{BA}$
 
 ---
 
@@ -349,7 +349,7 @@ class: text-slide
 
 .pull-left[
 - The previous example demonstrates why we must use F test to test all hypothesis simultaneously rather than a T test
-- Recall the T test for $H_0 \rightarrow \beta_1=\theta\text{:} \frac{(\beta_1-\theta)}{\text{SE}(\beta_1)}$
+- Recall the T test for $H_0 \rightarrow \hat{\beta}_1=\theta\text{:} \frac{(\hat{\beta}_1-\theta)}{\text{SE}(\hat{\beta}_1)}$
 - The above statistic is t-distributed under the null hypothesis, so we can see how likely it would be to get the above value from a t distribution
 - If we are testing multiple hypotheses, we can apply the same logic as long as we know how that statistic is distributed. In this new test, our statistic belongs to the F distribution
 ]
@@ -400,19 +400,6 @@ class: text-slide
 
 ---
 
-class: text-slide
-
-# Testing equality of two parameters
-
-- How should we test $\beta_1=\beta_2$?
-- $H_0\rightarrow \beta_1=\beta_2$ is erquivalent to $\beta_1-\beta_2=0$
-- Before, when $H_0\rightarrow \beta_1=0, T=\frac{\beta_1}{\sqrt{\text{Var}(\beta_1)}}$
-- What is $\text{var}(\beta_1-\beta_2)$?
-  - $\text{Var}(\beta_1)+\text{Var}(\beta_2)-2 \times \text{Cov}(\beta_1, \beta_2)$
-- We must consider the covariance! This is why testing the equality of regression coefficients from different regressions is extremely difficult
-
----
-
 class: text-slide, main-slide, center, middle, hide-count
 
 # Types of variables and transformations
@@ -458,7 +445,7 @@ Recall that the natural logarithm is the inverse of the exponential function, so
 .pull-left[
 $\text{ln}(1)=0$<br><br>
 $\text{ln}(0)=-\infty$<br><br>
-$\text{ln}(ax)=\text{ln}+\text{ln}(x)$<br><br>
+$\text{ln}(ax)=\text{ln}(a)+\text{ln}(x)$<br><br>
 ]
 .pull-right[
 $\text{ln}(x^a)=a\text{ln}(x)$<br><br>
@@ -478,11 +465,11 @@ class: text-slide
   - 1% change in $x=\beta_1/100$ change in $y$
 <br><br>
 
-- Log-level: $\text{ln}y=5+0.2(x)$
+- Log-level: $\text{ln}(y)=5+0.2(x)$
   - 1 unit change in $x=\beta_1 \times 100\text{%}$ change in $y$
 <br><br>
 
-- Log-log: $\text{ln}y=5+0.2\text{ln}(x)$
+- Log-log: $\text{ln}(y)=5+0.2\text{ln}(x)$
   - 1% change in $x=\beta_1\text{%}$ change in $y$
 <br><br>
 
