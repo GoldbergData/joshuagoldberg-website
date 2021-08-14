@@ -28,9 +28,9 @@ math: true
 # publishDate: "2017-01-01T00:00:00Z"
 share: true
 slides: 
-summary: Session 3 UChicago's Statistical Thinking Online Course.
+summary: Session 1 UChicago's Statistical Thinking Online Course.
 tags: [Statistics, Coding]
-title: Statistical Thinking Sync Session 3
+title: Statistical Thinking Sync Session 1
 url_code: ""
 url_pdf: ""
 url_slides: "slides/statistics-masterstrack-session-1/index.html"
