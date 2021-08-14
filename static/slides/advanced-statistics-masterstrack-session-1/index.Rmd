@@ -89,8 +89,7 @@ count: FALSE
 --
 
 - .left[Hypothesis testing]
-  - .left[Testing multiple parameters are once — T test vs. F test, Testing equality of two parameters]
-  - .left[Testing equality of two parameters]
+  - .left[Testing multiple parameters — T test vs. F test]
 
 --
 
@@ -487,4 +486,3 @@ class: text-slide
 - Do we need dummy variables for $guard$, $forward$, $center$?
 - How would the regression change if we only used 2 out of 3?
 - $\text{nbaSalary}=10.5 + 5\times \text{PPG}-0.9\times \text{forward}+0.3\times \text{center}$
-
