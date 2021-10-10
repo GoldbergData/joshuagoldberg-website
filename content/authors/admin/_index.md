@@ -3,9 +3,12 @@
 name: Joshua Goldberg
 authors:
 - admin
-bio: I am a data scientist with experience solving demand-forecasting problems with statistics, machine learning, and deep learning.
+bio: I am a data scientist with experience solving classification and demand-forecasting problems with statistics, machine learning, and deep learning.
 education:
   courses:
+  - course: Graduate Certificate in Software Design & Development
+    institution: University of Washington Bothell
+    year: 2021  
   - course: MSc in Analytics
     institution: University of Chicago
     year: 2020
@@ -50,4 +53,4 @@ social:
 superuser: true
 ---
 
-I am a data scientist with experience solving demand-forecasting problems with statistics, machine learning, and deep learning. I have strong interests in artificial intelligence and programming, having completed a Master of Science in Analytics at the University of Chicago. In my free time, I enjoy running, photography, and reading. I have finished two Chicago marathons and three half marathons.
+I am a data scientist with experience solving classification and demand-forecasting problems with statistics, machine learning, and deep learning. I have strong interests in artificial intelligence and programming, having completed a Master of Science in Analytics at the [University of Chicago](https://professional.uchicago.edu/find-your-fit/masters/master-science-analytics/curriculum). I am currently studying advanced computer science topics in C++ at [University of Washington Bothell](https://www.uwb.edu/stem/graduate/gcsdd). In my free time, I enjoy running, photography, and reading. I have finished two Chicago marathons and three half marathons.
