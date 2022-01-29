@@ -1,7 +1,7 @@
 ---
 title: "Week 3: Introduction to SQL"
 subtitle: "And Databases with R"
-author: "Joshua Goldberg <br><span style='font-size: 50%;'>Data Understanding and Preparation: DABP12000 20A7<br>Fall 2020</span>"
+author: "Joshua Goldberg <br><span style='font-size: 50%;'>Data Understanding and Preparation: DABP12000 20A7</span>"
 output:
   xaringan::moon_reader:
     css: [default, css/uchicago.css, robot-fonts]
@@ -90,7 +90,7 @@ class: text-slide
 
 # Topics
 
-- SQL Train of Thought
+- Structured Query Language (SQL) Basics
 
 - Connect/Read/Write R ↔ MySQL
 
@@ -100,8 +100,7 @@ class: text-slide
 
 class: text-slide, main-slide, center, middle, hide-count
 
-# Structured Query Language (SQL)
-# Train of Thought
+# Structured Query Language (SQL) Basics
 
 ---
 
@@ -619,7 +618,7 @@ flights_db %>%
 SELECT DISTINCT origin
   ,dest
 FROM flights
-WHERE year == 2013
+WHERE year = 2013
 LIMIT 5
 ```
 

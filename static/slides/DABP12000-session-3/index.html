@@ -3,7 +3,7 @@
   <head>
     <title>Week 3: Introduction to SQL</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Joshua Goldberg  Data Understanding and Preparation: DABP12000 20A7 Fall 2020" />
+    <meta name="author" content="Joshua Goldberg  Data Understanding and Preparation: DABP12000 20A7" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/robot-fonts.css" rel="stylesheet" />
@@ -15,7 +15,7 @@ class: left, middle, inverse, title-slide
 
 # Week 3: Introduction to SQL
 ## And Databases with R
-### Joshua Goldberg <br><span style="font-size: 50%;">Data Understanding and Preparation: DABP12000 20A7<br>Fall 2020</span>
+### Joshua Goldberg <br><span style="font-size: 50%;">Data Understanding and Preparation: DABP12000 20A7</span>
 
 ---
 
@@ -30,7 +30,7 @@ class: text-slide
 
 # Topics
 
-- SQL Train of Thought
+- Structured Query Language (SQL) Basics
 
 - Connect/Read/Write R ↔ MySQL
 
@@ -40,8 +40,7 @@ class: text-slide
 
 class: text-slide, main-slide, center, middle, hide-count
 
-# Structured Query Language (SQL)
-# Train of Thought
+# Structured Query Language (SQL) Basics
 
 ---
 
@@ -159,12 +158,12 @@ LIMIT 3;
 
 
 ```
-## # A tibble: 3 x 8
-##   faa   name                          lat   lon   alt    tz dst   tzone         
-##   &lt;chr&gt; &lt;chr&gt;                       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;         
-## 1 04G   Lansdowne Airport            41.1 -80.6  1044    -5 A     America/New_Y…
-## 2 06A   Moton Field Municipal Airp…  32.5 -85.7   264    -6 A     America/Chica…
-## 3 06C   Schaumburg Regional          42.0 -88.1   801    -6 A     America/Chica…
+## # A tibble: 3 × 8
+##   faa   name                            lat   lon   alt    tz dst   tzone       
+##   &lt;chr&gt; &lt;chr&gt;                         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+## 1 04G   Lansdowne Airport              41.1 -80.6  1044    -5 A     America/New…
+## 2 06A   Moton Field Municipal Airport  32.5 -85.7   264    -6 A     America/Chi…
+## 3 06C   Schaumburg Regional            42.0 -88.1   801    -6 A     America/Chi…
 ```
 ]
 
@@ -420,19 +419,19 @@ tbl(con_mydb, "airports")
 
 ```
 *## # Source:   table&lt;airports&gt; [?? x 8]
-*## # Database: mysql 8.0.23 [root@localhost:/mydb]
-##    faa   name                       lat    lon   alt    tz dst   tzone          
-##    &lt;chr&gt; &lt;chr&gt;                    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;          
-##  1 04G   Lansdowne Airport         41.1  -80.6  1044    -5 A     America/New_Yo…
-##  2 06A   Moton Field Municipal A…  32.5  -85.7   264    -6 A     America/Chicago
-##  3 06C   Schaumburg Regional       42.0  -88.1   801    -6 A     America/Chicago
-##  4 06N   Randall Airport           41.4  -74.4   523    -5 A     America/New_Yo…
-##  5 09J   Jekyll Island Airport     31.1  -81.4    11    -5 A     America/New_Yo…
-##  6 0A9   Elizabethton Municipal …  36.4  -82.2  1593    -5 A     America/New_Yo…
-##  7 0G6   Williams County Airport   41.5  -84.5   730    -5 A     America/New_Yo…
-##  8 0G7   Finger Lakes Regional A…  42.9  -76.8   492    -5 A     America/New_Yo…
-##  9 0P2   Shoestring Aviation Air…  39.8  -76.6  1000    -5 U     America/New_Yo…
-## 10 0S9   Jefferson County Intl     48.1 -123.    108    -8 A     America/Los_An…
+*## # Database: mysql 8.0.23 [@localhost:/mydb]
+##    faa   name                             lat    lon   alt    tz dst   tzone    
+##    &lt;chr&gt; &lt;chr&gt;                          &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    
+##  1 04G   Lansdowne Airport               41.1  -80.6  1044    -5 A     America/…
+##  2 06A   Moton Field Municipal Airport   32.5  -85.7   264    -6 A     America/…
+##  3 06C   Schaumburg Regional             42.0  -88.1   801    -6 A     America/…
+##  4 06N   Randall Airport                 41.4  -74.4   523    -5 A     America/…
+##  5 09J   Jekyll Island Airport           31.1  -81.4    11    -5 A     America/…
+##  6 0A9   Elizabethton Municipal Airport  36.4  -82.2  1593    -5 A     America/…
+##  7 0G6   Williams County Airport         41.5  -84.5   730    -5 A     America/…
+##  8 0G7   Finger Lakes Regional Airport   42.9  -76.8   492    -5 A     America/…
+##  9 0P2   Shoestring Aviation Airfield    39.8  -76.6  1000    -5 U     America/…
+## 10 0S9   Jefferson County Intl           48.1 -123.    108    -8 A     America/…
 ## # … with more rows
 ```
 ]
@@ -585,7 +584,7 @@ flights_db %&gt;% head(2)
 
 ```
 ## # Source:   lazy query [?? x 19]
-## # Database: mysql 8.0.23 [root@localhost:/mydb]
+## # Database: mysql 8.0.23 [@localhost:/mydb]
 ##    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ## 1  2013     1     1      517            515         2      830            819
@@ -618,7 +617,7 @@ flights_db %&gt;%
 
 ```
 ## # Source:   lazy query [?? x 2]
-## # Database: mysql 8.0.23 [root@localhost:/mydb]
+## # Database: mysql 8.0.23 [@localhost:/mydb]
 ##   origin dest 
 ##   &lt;chr&gt;  &lt;chr&gt;
 ## 1 EWR    IAH  
@@ -636,13 +635,13 @@ flights_db %&gt;%
 SELECT DISTINCT origin
   ,dest
 FROM flights
-WHERE year == 2013
+WHERE year = 2013
 LIMIT 5
 ```
 
 
 ```
-## # A tibble: 5 x 2
+## # A tibble: 5 × 2
 ##   origin dest 
 ##   &lt;chr&gt;  &lt;chr&gt;
 ## 1 EWR    IAH  
@@ -752,7 +751,7 @@ class: text-slide
 
 ```
 ## # Source:     lazy query [?? x 4]
-## # Database:   mysql 8.0.23 [root@localhost:/mydb]
+## # Database:   mysql 8.0.23 [@localhost:/mydb]
 ## # Groups:     year, origin
 ## # Ordered by: desc(max_arr_delay)
 ##    year origin dest  max_arr_delay
@@ -770,7 +769,7 @@ class: text-slide
 
 
 ```
-## # A tibble: 5 x 4
+## # A tibble: 5 × 4
 ##    year origin dest  max_arr_delay
 ##   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt;
 ## 1  2013 JFK    HNL            1272
@@ -878,7 +877,7 @@ class: text-slide
 
 ```
 ## # Source:     lazy query [?? x 2]
-## # Database:   mysql 8.0.23 [root@localhost:/mydb]
+## # Database:   mysql 8.0.23 [@localhost:/mydb]
 ## # Ordered by: month
 ##    month month_name 
 ##    &lt;int&gt; &lt;chr&gt;      
@@ -902,7 +901,7 @@ class: text-slide
 
 
 ```
-## # A tibble: 12 x 2
+## # A tibble: 12 × 2
 ##    month month_name 
 ##    &lt;int&gt; &lt;chr&gt;      
 ##  1     1 January    
@@ -939,9 +938,8 @@ class: text-slide
 ## WHEN (`month` = 6.0) THEN ('June')
 ## ELSE ('Other month')
 ## END AS `month_name`
-## FROM (SELECT DISTINCT *
-## FROM (SELECT `month`
-## FROM `flights`) `dbplyr_003`) `dbplyr_004`
+## FROM (SELECT DISTINCT `month`
+## FROM `flights`) `q01`
 ## ORDER BY `month`
 ```
 ]
