@@ -1,6 +1,7 @@
 ---
 # Display name
 name: Joshua Goldberg
+active: false
 authors:
 - admin
 bio: I am a data scientist with experience solving classification and demand-forecasting problems with statistics, machine learning, and deep learning.
@@ -29,19 +30,19 @@ organizations:
 # - name: Amazon
 #  url: ""
 # role: Data Scientist
-social:
-- icon: envelope
-  icon_pack: fas
-  link: '/contact'
+# social:
+# - icon: envelope
+#   icon_pack: fas
+#   link: '/contact'
 # - icon: twitter
 #   icon_pack: fab
 #   link: https://twitter.com/goldbergdata
-- icon: linkedin
-  icon_pack: fab
-  link: https://linkedin.com/in/goldbergdata
-- icon: github
-  icon_pack: fab
-  link: https://github.com/goldbergdata
+# - icon: linkedin
+#   icon_pack: fab
+#   link: https://linkedin.com/in/goldbergdata
+# - icon: github
+#   icon_pack: fab
+#   link: https://github.com/goldbergdata
 # - icon: free-code-camp
 #   icon_pack: fab
 #   link: https://www.freecodecamp.org/goldbergdata

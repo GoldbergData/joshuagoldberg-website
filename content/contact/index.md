@@ -4,4 +4,5 @@ summary: How to get in touch
 title: "About"
 type: widget_page
 aliases: [bio]
+active: false
 ---
